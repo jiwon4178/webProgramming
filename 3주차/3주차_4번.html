@@ -1,0 +1,23 @@
+<html>
+	<head>
+	<style type="text/css">
+	#map{visibility: hidden;}
+	</style>
+	<title>3주차 4번</title>
+	<script type="text/javascript">
+	var p = document.getElementsByName("img");
+	 function cal(){
+		if(p[0].checked){ map.style.visibility = "hidden";} 
+		else if(p[1].checked){ map.style.visibility = "visible";}
+	 }
+	</script>
+
+</head>
+	<body>
+		<div style="height : auto">
+		<input type="radio" name="img" onclick="cal()"checked = "checked"> 숨기기
+		<input type="radio" name="img" onclick="cal()"> 보이기
+		<div id = "map"><img src = "map1.jpg"></div>
+		</div>
+	</body>
+</html>

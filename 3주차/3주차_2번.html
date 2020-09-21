@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> 3주차 2번 </title>
+		<style type="text/css">
+		#item1 { border:2px solid gray; margin:10px;  }
+		#item2 { border:2px solid gray; margin:10px;  }
+		#item3 { border:2px solid gray; margin:10px;  }
+		p, pre {}
+		</style>
+	</head>
+<body>
+	<script type="text/javascript">
+		function dragover(wpevent)
+		{ wpevent.preventDefault();}
+		function dragstart(wpevent)
+		{ wpevent.dataTransfer.effectAllowed='move';
+		wpevent.dataTransfer.setData("Text",wpevent.target.id);}
+		function dragend(wpevent)
+		{ wpevent.dataTransfer.clearData("Text");}
+		function drop(wpevent)
+		{ wpevent.preventDefault();
+			var item=wpevent.dataTransfer.getData("Text");
+			wpevent.target.appendChild(document.getElementById(item));
+			wpevent.stopPropagation();
+			
+			var fruit = document.getElementById('which');
+			fruit.style.textAlign = "center";
+			fruit.style.fontWeight = "bold";
+			fruit.style.fontSize = "30px";
+
+        
+			if(item == "item1")
+				fruit.innerHTML="사과를 옮겼습니다.";
+			else if(item == "item2")
+				fruit.innerHTML="포도를 옮겼습니다.";
+			else if(item == "item3")
+				fruit.innerHTML="체리를 옮겼습니다.";
+        }
+	</script>
+	<font size="20"><p><b>과일목록</b></font><br><br>
+	<div style=" margin:15px; height: 300px; width: 100%; border:2px solid gray;" ondrop="drop(event)" ondragover="dragover(event)">
+       <img id="item1" src = "apple.jpg" alt = "실패" width = "200" height = "225" draggable="true" ondragstart="dragstart(event)"ondragend="dragend(event)">
+        <img id="item2" src = "grape.jpg" alt = "실패" width = "200" height = "225" border="1"  draggable="true" ondragstart="dragstart(event)" ondragend="dragend(event)" >
+        <img id= "item3" src = "cherry.jpg" alt = "실패" width = "200" height = "225" border="1"  draggable="true" ondragstart="dragstart(event)"ondragend="dragend(event)"> </div>
+	<div id="div2" ondrop="drop(event)" ondragover="dragover(event)"> </div>
+	
+	<font size="20"><p><p><p><b>장바구니</b></font><br><br>
+
+      <div id="div2" ondrop="drop(event)" ondragover="dragover(event)" style="height: 300px; width: 100%; margin:15px; border:2px solid gray;"> 
+      </div>
+      
+      <p id="which"></p>
+	</body>
+</html>
