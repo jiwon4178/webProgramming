@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title> 5주차 2번 </title>
+<script type = "text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!--jquery를 사용-->
+<script type="text/javascript"> 
+$(function(){
+	$("#listprint").click(function(){  //id가 listButton 인 버튼을 누를 경우 작동하는 함수
+		$.ajax({ 
+			type: 'POST' ,
+			url: 'list.html' ,
+			dataType : 'html' , 
+			success: function(data) { 	$("#ld").html(data); }
+			});
+	})
+})
+</script>
+</head>
+<body>
+	<input type="button" id="listprint" value="리스트출력" />
+	<br />
+	<div id="ld"></div>
+</body>
+</html>

@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<!-- saved from url=(0013)about:internet -->
+<meta charset="utf-8">
+
+   <title>5주차 1번</title>
+   <script src="http://code.jquery.com/jquery-3.2.1.js"></script>
+    
+</head>
+<body>
+<div style="width: 200px; height: auto;">
+<br>
+<h1 style="margin: 0px 10px 0px 10px; font-style: bold; font-size: 15px">학생 명단</h1>
+
+<p style="font-style: bold; font-size: 15px"><p id = "st1" style="background-color: yellow; margin: 10px 10px 10px 10px">
+<p style="font-style: bold; font-size: 15px"><p id = "st2"style="background-color: green; margin: 10px 10px 10px 10px">
+<p style="font-style: bold; font-size: 15px"><p id = "st3" style="background-color: grey; margin: 10px 10px 10px 10px">
+<p style="font-style: bold; font-size: 15px"><p id = "st4" style="background-color: pink; margin: 10px 10px 10px 10px">
+<p style="font-style: bold; font-size: 15px"><p id = "st5" style="background-color: orange; margin: 10px 10px 10px 10px">
+
+</p></pre>
+
+</div>
+<script >
+   var s = '[' +
+   '{"name":"Hong","age":"21" },' +
+   '{"name":"Kim","age":"35" },' +
+   '{"name":"Kang","age":"61" },' +
+   '{"name":"Han","age":"72" },' +
+   '{"name":"Jang","age":"89" }]';
+
+var st = eval("(" + s + ")");
+
+$("#st1").append("이름: "+ st[0].name + " " + "나이: " + st[0].age + "\n");
+$("#st2").append("이름: "+ st[1].name + " " + "나이: " + st[1].age + "\n");
+ $("#st3").append("이름: "+ st[2].name + " " + "나이: " + st[2].age + "\n");
+ $("#st4").append("이름: "+ st[3].name + " " + "나이: " + st[3].age + "\n");
+ $("#st5").append("이름: "+ st[4].name + " " + "나이: " + st[4].age + "\n");
+   
+   
+</script> 
+</body>
+</html>

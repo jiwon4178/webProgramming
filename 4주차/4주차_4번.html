@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title> 4주차 4번 </title>
+	<meta http-equiv="Content-Type" content="text/html; charset = utf-8">
+	<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+	</head>
+	<body>
+	<a id = "a1" href="http://www.dongguk.edu/" target="_blank">페이지 이동</a>
+	<a id = "a2" href="http://lib.dongguk.edu" target="_blank" style="display:none">페이지 이동</a>
+	<button id="B1">URL 변경 </button><p>
+	<img id="new" src="1.png">
+	<img id="new2" src="2.png" style="display:none"><br>
+	<button id = "B2">사진 변경</button>
+	<script>
+		$(document).ready(function(){
+			$("#B1").click(function(){
+				$("#a1").hide();
+				$("#a2").show();
+			});
+			$("#B2").click(function(){
+				$("#new").hide();
+				$("#new2").show();
+			});	
+		});
+		</script>
+	</body>
+</html>

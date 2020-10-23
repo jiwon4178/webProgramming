@@ -1,0 +1,26 @@
+<html>
+	<head>
+	<title> 4주차 1번 </title>
+	<script type = "text/javascript" src="https://code.jquery.com/jQuery-3.5.1.js"></script>
+	<script>
+		$(function(){
+			$(".box").mouseleave(function(){ 
+				$('div').css('height', '200px');
+				$('div').css('width', '200px');
+				$('.box').css('backgroundColor', '#0000fe');
+				$(".word").text("마우스 포인터가 밖에 있을 경우 박스는 파랑색입니다.");
+			});
+			$(".box").mouseenter(function(){ 
+				$('div').css('height', '200px');
+				$('div').css('width', '200px');
+				$('.box').css('backgroundColor', '#800080');
+				$(".word").text("마우스 포인터가 안에 있을 경우 박스는 보라색입니다.");
+			});
+		});
+	</script>
+	</head>
+	<body>
+		<div class="box" style="width:200px; height:200px; background:#cd5c5c"></div>
+		<p class="word">박스에 마우스 포인터를 올리고 내려 보세요.</p>
+	</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+   <head>
+   <title> 4주차 3번 </title>
+   <meta http-equiv="Content-Type" content="text/html; charset = utf-8">
+   <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+   </head>
+   <body>
+   <button id="B1">시작 </button> <button id = "B2">정지</button><p><br>
+   <img id="new" src="1.png" style="display:none">
+   <script>
+      $(document).ready(function(){
+         $("#B1").click(function(){
+            $("#new").show("slow").slideUp("fast").slideDown("slow");
+         });
+         $("#B2").click(function(){
+            $("#new").hide("slow");
+         });
+         
+      });
+      </script>
+   </body>
+</html>

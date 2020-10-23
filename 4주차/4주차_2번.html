@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>4주차 2번</title>
+	<script type = "text/javascript" src="https://code.jquery.com/jQuery-3.5.1.js"></script>
+	</head>
+	<body>
+	<div id="box" style="width:60px; height:60px; background:#0000fe; margin-bottom:5px"></div>
+	<button id="B1">상자 확대 </button> <button id = "B2">상자 축소</button>
+	<script>
+		$(document).ready(function(){			
+			$("#B1").click(function(){
+				$('#box').animate({	width : '+=30'});
+			});		
+			$("#B2").click(function(){
+				$('#box').animate({	width : '-=30'});
+			});				
+		});
+	</script>
+	</body>
+</html>
